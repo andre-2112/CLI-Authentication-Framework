@@ -23,13 +23,13 @@ else:
 
 setup(
     name="cca-sdk",
-    version="0.2.0",
-    author="CCA Development Team",
+    version="0.3.0",
+    author="2112 Lab",
     author_email="info@2112-lab.com",
-    description="Cloud CLI Access SDK - Secure AWS authentication using Amazon Cognito",
+    description="CLI Authentication Framework - Secure AWS authentication using Amazon Cognito",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/2112-lab/cca",
+    url="https://github.com/andre-2112/CLI-Authentication-Framework",
     packages=find_packages(exclude=['tests', 'docs']),
     py_modules=["ccc"],
     classifiers=[
@@ -56,8 +56,8 @@ setup(
     },
     keywords='aws cognito authentication cli sdk',
     project_urls={
-        'Documentation': 'https://github.com/2112-lab/cca/docs',
-        'Source': 'https://github.com/2112-lab/cca',
-        'Tracker': 'https://github.com/2112-lab/cca/issues',
+        'Documentation': 'https://github.com/andre-2112/CLI-Authentication-Framework/tree/master/docs',
+        'Source': 'https://github.com/andre-2112/CLI-Authentication-Framework',
+        'Tracker': 'https://github.com/andre-2112/CLI-Authentication-Framework/issues',
     },
 )

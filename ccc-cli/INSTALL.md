@@ -1,8 +1,8 @@
-# CCA SDK & CLI - Installation Guide
+# CLI Authentication Framework - Installation Guide
 
-Complete installation instructions for the CCA (Cloud CLI Access) SDK and CLI tool.
+Complete installation instructions for the CLI Authentication Framework SDK and CLI tool.
 
-**Version**: 0.2.3
+**Version**: 0.3.0
 **Last Updated**: November 10, 2025
 
 ---
@@ -64,12 +64,12 @@ This method installs the CCA SDK in "editable" mode, allowing you to modify the 
 
 ```bash
 # Using HTTPS
-git clone https://github.com/2112-lab/cca.git
-cd cca/ccc-cli
+git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
+cd CLI-Authentication-Framework/ccc-cli
 
 # Or using SSH
-git clone git@github.com:2112-lab/cca.git
-cd cca/ccc-cli
+git clone git@github.com:andre-2112/CLI-Authentication-Framework.git
+cd CLI-Authentication-Framework/ccc-cli
 ```
 
 #### Step 2: Install in Editable Mode
@@ -88,7 +88,7 @@ pip3 install -e .
 
 ```bash
 ccc version
-# Output: CCC CLI v0.2.0 (Cognito)
+# Output: CCC CLI v0.3.0 (Cognito)
 ```
 
 ---
@@ -415,8 +415,8 @@ source ~/.bashrc
 ### Upgrade from Git Repository
 
 ```bash
-cd cca/ccc-cli
-git pull origin main
+cd CLI-Authentication-Framework/ccc-cli
+git pull origin master
 pip3 install --upgrade -e .
 ```
 
@@ -625,8 +625,8 @@ If you encounter issues not covered here:
 1. Check the [Troubleshooting](#troubleshooting) section
 2. Review the [README.md](README.md)
 3. Check documentation in `/docs` directory
-4. Contact your CCA administrator
-5. Open an issue: https://github.com/2112-lab/cca/issues
+4. Contact your administrator
+5. Open an issue: https://github.com/andre-2112/CLI-Authentication-Framework/issues
 6. Email: info@2112-lab.com
 
 ---
@@ -635,8 +635,8 @@ If you encounter issues not covered here:
 
 **Quick Install (Most Users)**:
 ```bash
-git clone https://github.com/2112-lab/cca.git
-cd cca/ccc-cli
+git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
+cd CLI-Authentication-Framework/ccc-cli
 pip3 install -e .
 ccc configure
 ccc login
@@ -646,8 +646,8 @@ ccc login
 ```bash
 python3 -m venv cca-env
 source cca-env/bin/activate
-git clone https://github.com/2112-lab/cca.git
-cd cca/ccc-cli
+git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
+cd CLI-Authentication-Framework/ccc-cli
 pip3 install -e .
 ccc configure
 ccc login
@@ -655,6 +655,6 @@ ccc login
 
 ---
 
-**Installation Guide Version**: 1.1
+**Installation Guide Version**: 1.2
 **Last Updated**: November 10, 2025
-**CCA Version**: 0.2.3
+**Framework Version**: 0.3.0
