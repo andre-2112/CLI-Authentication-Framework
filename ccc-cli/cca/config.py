@@ -11,24 +11,48 @@ from pathlib import Path
 # Configuration file paths
 CONFIG_DIR = Path.home() / ".ccc"
 CONFIG_FILE = CONFIG_DIR / "config.json"
+DEFAULT_CONFIG_FILE = Path(__file__).parent / "config.default.json"
+
+
+def load_default_config():
+    """
+    Load default configuration from package
+
+    Returns:
+        dict: Default configuration dictionary (empty dict if file doesn't exist)
+    """
+    if not DEFAULT_CONFIG_FILE.exists():
+        return {}
+
+    try:
+        with open(DEFAULT_CONFIG_FILE, 'r') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[WARNING] Failed to load default config: {e}")
+        return {}
 
 
 def load_config():
     """
     Load CCC configuration from ~/.ccc/config.json
+    Falls back to default config if user config doesn't exist
 
     Returns:
-        dict: Configuration dictionary (empty dict if file doesn't exist)
+        dict: Configuration dictionary (default config if user config doesn't exist)
     """
-    if not CONFIG_FILE.exists():
-        return {}
+    # Load defaults first
+    config = load_default_config()
 
-    try:
-        with open(CONFIG_FILE, 'r') as f:
-            return json.load(f)
-    except Exception as e:
-        print(f"[ERROR] Failed to load config: {e}")
-        return {}
+    # Overlay user config if it exists
+    if CONFIG_FILE.exists():
+        try:
+            with open(CONFIG_FILE, 'r') as f:
+                user_config = json.load(f)
+                config.update(user_config)
+        except Exception as e:
+            print(f"[ERROR] Failed to load config: {e}")
+
+    return config
 
 
 def save_config(config):

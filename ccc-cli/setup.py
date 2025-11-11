@@ -31,6 +31,9 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/andre-2112/CLI-Authentication-Framework",
     packages=find_packages(exclude=['tests', 'docs']),
+    package_data={
+        'cca': ['config.default.json'],
+    },
     py_modules=["ccc"],
     classifiers=[
         "Programming Language :: Python :: 3",
