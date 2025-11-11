@@ -32,8 +32,10 @@ venv/
 ENV/
 env/
 
-# AWS credentials (safety)
-*credentials*
+# AWS credentials (safety) - specific paths only
+.aws/credentials
+**/credentials.txt
+**/aws_credentials*
 *.pem
 *.key
 
