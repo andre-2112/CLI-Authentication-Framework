@@ -155,6 +155,7 @@ def handle_registration(event):
 
     print(f"[REG] Approve URL: {approve_url}")
     print(f"[REG] Deny URL: {deny_url}")
+    print(f"[REG] Approve token length: {len(approve_token)} characters")
 
     # Send email to admin
     try:
@@ -369,7 +370,7 @@ def handle_denial(event):
     ''', 200)
 
 def create_signed_token(data, action):
-    """Create JWT-like signed token with data and action"""
+    """Create JWT-like signed token with data and action (single base64 encoding)"""
     payload = {
         'data': data,
         'action': action
@@ -385,14 +386,13 @@ def create_signed_token(data, action):
     ).hexdigest()
 
     token = f"{payload_b64}.{signature}"
-    return base64.urlsafe_b64encode(token.encode()).decode()
+    return token  # Fixed: Removed double encoding - return token directly
 
 def verify_signed_token(token, expected_action):
-    """Verify and decode signed token"""
+    """Verify and decode signed token (single base64 encoding)"""
     try:
-        # Decode outer base64
-        decoded = base64.urlsafe_b64decode(token.encode()).decode()
-        payload_b64, signature = decoded.split('.')
+        # Fixed: Removed double decoding - split token directly
+        payload_b64, signature = token.split('.')
 
         # Verify signature
         expected_sig = hmac.new(
