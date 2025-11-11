@@ -589,9 +589,9 @@ aws --profile default sts get-caller-identity
    ```
 
 5. **Read Documentation**:
-   - [SDK Integration Guide](docs/CCA%200.2%20-%20SDK%20Integration%20Guide.md)
-   - [Hybrid CloudTrail Implementation](docs/CCA%200.2%20-%20Logs%20-%20Hybrid%20CloudTrail%20Implementation.md)
-   - [Deployment and Test Summary](docs/CCA_0.2.3_Deployment_and_Test_Summary.md)
+   - [User Guide](docs/User%20Guide%20-%200.3.md)
+   - [Integration Guide](docs/Integration%20Guide%20-%200.2.md)
+   - [Architecture Guide](docs/Architecture%20Guide%20-%200.3.md)
 
 ---
 

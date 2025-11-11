@@ -402,15 +402,13 @@ Make sure you've run `ccc login` successfully.
 
 Comprehensive documentation is available in the `/docs` directory:
 
-### User Guides
 - **[INSTALL.md](INSTALL.md)** - Detailed installation instructions
-- **[CCA 0.2 - SDK Integration Guide.md](docs/CCA%200.2%20-%20SDK%20Integration%20Guide.md)** - Complete SDK documentation with examples
-- **[CCA 0.2 - Hybrid CloudTrail Implementation.md](docs/CCA%200.2%20-%20Hybrid%20CloudTrail%20Implementation.md)** - CloudTrail setup and usage
-
-### Technical Documentation
-- **[CCA 0.2 - Implementation Changes Log - Updated.md](docs/CCA%200.2%20-%20Implementation%20Changes%20Log%20-%20Updated.md)** - Version history and changes
-- **[CCA 0.2 - Report - End-to-End Testing.md](docs/CCA%200.2%20-%20Report%20-%20End-to-End%20Testing.md)** - Testing results (22/22 tests passed)
-- **[Addendum - AWS Resources Inventory - 0.2 - Updated.md](docs/Addendum%20-%20AWS%20Resources%20Inventory%20-%20Updated.md)** - Infrastructure details
+- **[User Guide - 0.3.md](docs/User%20Guide%20-%200.3.md)** - Complete user guide for CLI Authentication Framework
+- **[Architecture Guide - 0.3.md](docs/Architecture%20Guide%20-%200.3.md)** - System architecture and design
+- **[Architecture Guide - 0.2.md](docs/Architecture%20Guide%20-%200.2.md)** - Architecture documentation for version 0.2
+- **[Integration Guide - 0.2.md](docs/Integration%20Guide%20-%200.2.md)** - SDK integration and code examples
+- **[Configuration Guide - 0.2.md](docs/Configuration%20Guide%20-%200.2.md)** - Configuration and setup details
+- **[User Management Guide - 0.2.md](docs/User%20Management%20Guide%20-%200.2.md)** - User registration and management workflows
 
 ## License
 
