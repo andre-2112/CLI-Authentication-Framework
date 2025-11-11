@@ -3,6 +3,6 @@
   "app_client_id": "1bga7o1j5vthc9gmfq7eeba3ti",
   "identity_pool_id": "us-east-1:0a656e9c-d356-4964-b6ba-610afb34cbb7",
   "region": "us-east-1",
-  "profile": "cca",
+  "profile": "default",
   "lambda_url": "https://pli7xymprlva76biu3h6dyso4m0vpqqw.lambda-url.us-east-1.on.aws/"
 }
