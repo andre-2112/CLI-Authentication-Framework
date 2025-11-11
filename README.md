@@ -64,7 +64,7 @@ You'll be prompted for:
 - **Cognito App Client ID**: `xxxxxxxxxxxxxxxxxxxxxxxxxxxx`
 - **Cognito Identity Pool ID**: `us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 - **AWS Region**: `us-east-1`
-- **AWS Profile Name**: `cca` (default)
+- **AWS Profile Name**: `default` (default)
 
 ### 2. Login
 
@@ -78,10 +78,10 @@ Enter your email and password when prompted.
 
 ```bash
 # Option 1: Use profile flag
-aws --profile cca s3 ls
+aws --profile default s3 ls
 
 # Option 2: Set environment variable
-export AWS_PROFILE=cca
+export AWS_PROFILE=default
 aws s3 ls
 ```
 
@@ -193,7 +193,7 @@ Configuration is stored in `~/.ccc/config.json`:
   "app_client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "identity_pool_id": "us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "region": "us-east-1",
-  "profile": "cca",
+  "profile": "default",
   "lambda_url": "https://xxxxx.lambda-url.us-east-1.on.aws/"
 }
 ```
@@ -205,7 +205,7 @@ Configuration is stored in `~/.ccc/config.json`:
 AWS credentials are stored in `~/.aws/credentials`:
 
 ```ini
-[cca]
+[default]
 aws_access_key_id = ASIA...
 aws_secret_access_key = ...
 aws_session_token = ...

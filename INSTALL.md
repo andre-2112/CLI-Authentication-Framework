@@ -168,7 +168,7 @@ Cognito User Pool ID []: us-east-1_iMy46bnz6
 Cognito App Client ID []: 347g0jncdadgjqigz9ch34gZna
 Cognito Identity Pool ID []: us-east-1:c7e5a1a1-77e7-422a-a67e-b44f05d4b4b4
 AWS Region [us-east-1]: us-east-1
-AWS Profile Name [cca]: cca
+AWS Profile Name [default]: default
 
 [OK] Configuration saved to /home/user/.ccc/config.json
 
@@ -190,7 +190,7 @@ If you want to use the `ccc register` command for CLI-based registration, you ne
   "app_client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "identity_pool_id": "us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "region": "us-east-1",
-  "profile": "cca",
+  "profile": "default",
   "lambda_url": "https://xxxxx.lambda-url.us-east-1.on.aws/"
 }
 ```
@@ -210,7 +210,7 @@ Should show:
   "app_client_id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   "identity_pool_id": "us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
   "region": "us-east-1",
-  "profile": "cca"
+  "profile": "default"
 }
 ```
 
@@ -252,7 +252,7 @@ ccc whoami
 # Should show your email, region, and AWS identity
 
 # Test AWS CLI integration
-aws --profile cca sts get-caller-identity
+aws --profile default sts get-caller-identity
 # Should show your AWS account info
 ```
 
@@ -450,7 +450,7 @@ pip3 uninstall cca-sdk
 rm -rf ~/.ccc/
 
 # Remove AWS credentials profile (optional)
-# Edit ~/.aws/credentials and remove [cca] section
+# Edit ~/.aws/credentials and remove [default] section
 ```
 
 ### Remove from PATH
@@ -557,15 +557,15 @@ ccc login
 ccc whoami
 
 # Test AWS access
-aws --profile cca sts get-caller-identity
+aws --profile default sts get-caller-identity
 ```
 
 ### Recommended Next Steps
 
 1. **Set Default Profile** (optional):
    ```bash
-   export AWS_PROFILE=cca
-   echo 'export AWS_PROFILE=cca' >> ~/.bashrc
+   export AWS_PROFILE=default
+   echo 'export AWS_PROFILE=default' >> ~/.bashrc
    ```
 
 2. **Test New Commands** (v0.2.3):
