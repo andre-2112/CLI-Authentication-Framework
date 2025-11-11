@@ -405,10 +405,7 @@ Comprehensive documentation is available in the `/docs` directory:
 - **[INSTALL.md](INSTALL.md)** - Detailed installation instructions
 - **[User Guide - 0.3.md](docs/User%20Guide%20-%200.3.md)** - Complete user guide for CLI Authentication Framework
 - **[Architecture Guide - 0.3.md](docs/Architecture%20Guide%20-%200.3.md)** - System architecture and design
-- **[Architecture Guide - 0.2.md](docs/Architecture%20Guide%20-%200.2.md)** - Architecture documentation for version 0.2
 - **[Integration Guide - 0.2.md](docs/Integration%20Guide%20-%200.2.md)** - SDK integration and code examples
-- **[Configuration Guide - 0.2.md](docs/Configuration%20Guide%20-%200.2.md)** - Configuration and setup details
-- **[User Management Guide - 0.2.md](docs/User%20Management%20Guide%20-%200.2.md)** - User registration and management workflows
 
 ## License
 
