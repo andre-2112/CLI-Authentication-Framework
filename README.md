@@ -1,4 +1,4 @@
-# CCA SDK & CLI - Cloud CLI Access (v0.2.3 - Cognito)
+# CLI Authentication Framework v0.3.0
 
 Modular SDK and CLI tool for secure AWS authentication using Amazon Cognito User Pools and Identity Pools.
 
@@ -29,8 +29,9 @@ Modular SDK and CLI tool for secure AWS authentication using Amazon Cognito User
 ### Option 1: From Source (Development)
 
 ```bash
-cd ccc-cli
-pip3 install -e .
+git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
+cd CLI-Authentication-Framework
+pip3 install -e ccc-cli/
 ```
 
 This installs both the `cca` SDK package and the `ccc` CLI command.
@@ -355,9 +356,9 @@ Make sure you've run `ccc login` successfully.
 
 ## Version
 
-**CCA SDK & CLI v0.2.3 (Cognito + Modular SDK)**
+**CLI Authentication Framework v0.3.0**
 
-### Recent Changes (v0.2.3)
+### Recent Changes (v0.3.0)
 
 **New Features (2025-11-10)**:
 - ✅ Optional names in registration (first_name and last_name now optional)
@@ -418,6 +419,6 @@ MIT License
 ## Support
 
 For issues or questions:
-- GitHub Issues: https://github.com/2112-lab/cca/issues
+- GitHub Issues: https://github.com/andre-2112/CLI-Authentication-Framework/issues
 - Documentation: See `/docs` directory
 - Contact: info@2112-lab.com

@@ -65,17 +65,17 @@ This method installs the CCA SDK in "editable" mode, allowing you to modify the 
 ```bash
 # Using HTTPS
 git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
-cd CLI-Authentication-Framework/ccc-cli
+cd CLI-Authentication-Framework
 
 # Or using SSH
 git clone git@github.com:andre-2112/CLI-Authentication-Framework.git
-cd CLI-Authentication-Framework/ccc-cli
+cd CLI-Authentication-Framework
 ```
 
 #### Step 2: Install in Editable Mode
 
 ```bash
-pip3 install -e .
+pip3 install -e ccc-cli/
 ```
 
 **What this does**:
@@ -120,7 +120,7 @@ pip3 install cca_sdk-0.2.0-py3-none-any.whl
 If you don't have system-wide pip permissions:
 
 ```bash
-pip3 install --user -e .
+pip3 install --user -e ccc-cli/
 ```
 
 The `ccc` command will be installed to `~/.local/bin/` (Linux/macOS) or `%APPDATA%\Python\Scripts\` (Windows).
@@ -311,7 +311,7 @@ which pip3
 
 4. Reinstall with explicit Python:
 ```bash
-python3 -m pip install -e .
+python3 -m pip install -e ccc-cli/
 ```
 
 ---
@@ -328,7 +328,7 @@ pip3 install boto3>=1.26.0
 
 Or reinstall the package:
 ```bash
-pip3 install --force-reinstall -e .
+pip3 install --force-reinstall -e ccc-cli/
 ```
 
 ---
@@ -339,7 +339,7 @@ pip3 install --force-reinstall -e .
 
 **Solution 1**: Install for current user only:
 ```bash
-pip3 install --user -e .
+pip3 install --user -e ccc-cli/
 ```
 
 **Solution 2**: Use virtual environment (recommended):
@@ -349,7 +349,7 @@ source cca-env/bin/activate  # Linux/macOS
 # or
 source cca-env/Scripts/activate  # Windows Git Bash
 
-pip3 install -e .
+pip3 install -e ccc-cli/
 ```
 
 ---
@@ -415,9 +415,9 @@ source ~/.bashrc
 ### Upgrade from Git Repository
 
 ```bash
-cd CLI-Authentication-Framework/ccc-cli
+cd CLI-Authentication-Framework
 git pull origin master
-pip3 install --upgrade -e .
+pip3 install --upgrade -e ccc-cli/
 ```
 
 ### Upgrade from PyPI (when available)
@@ -469,8 +469,8 @@ python3 -m venv cca-dev
 source cca-dev/bin/activate
 
 # Install in virtual environment
-cd cca/ccc-cli
-pip3 install -e .
+cd CLI-Authentication-Framework
+pip3 install -e ccc-cli/
 
 # Use CLI
 ccc version
@@ -511,12 +511,12 @@ Use virtual environments or specify install location:
 # Version 1
 python3 -m venv cca-v1
 source cca-v1/bin/activate
-cd cca-v1-code && pip3 install -e .
+cd cca-v1-code && pip3 install -e ccc-cli/
 
 # Version 2
 python3 -m venv cca-v2
 source cca-v2/bin/activate
-cd cca-v2-code && pip3 install -e .
+cd cca-v2-code && pip3 install -e ccc-cli/
 ```
 
 ---
@@ -589,9 +589,9 @@ aws --profile cca sts get-caller-identity
    ```
 
 5. **Read Documentation**:
-   - [SDK Integration Guide](../docs/CCA%200.2%20-%20SDK%20Integration%20Guide.md)
-   - [Hybrid CloudTrail Implementation](../docs/CCA%200.2%20-%20Hybrid%20CloudTrail%20Implementation.md)
-   - [Test Report](../docs/CCA_0.2.3_Test_Report.md)
+   - [SDK Integration Guide](docs/CCA%200.2%20-%20SDK%20Integration%20Guide.md)
+   - [Hybrid CloudTrail Implementation](docs/CCA%200.2%20-%20Logs%20-%20Hybrid%20CloudTrail%20Implementation.md)
+   - [Deployment and Test Summary](docs/CCA_0.2.3_Deployment_and_Test_Summary.md)
 
 ---
 
@@ -636,8 +636,8 @@ If you encounter issues not covered here:
 **Quick Install (Most Users)**:
 ```bash
 git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
-cd CLI-Authentication-Framework/ccc-cli
-pip3 install -e .
+cd CLI-Authentication-Framework
+pip3 install -e ccc-cli/
 ccc configure
 ccc login
 ```
@@ -647,8 +647,8 @@ ccc login
 python3 -m venv cca-env
 source cca-env/bin/activate
 git clone https://github.com/andre-2112/CLI-Authentication-Framework.git
-cd CLI-Authentication-Framework/ccc-cli
-pip3 install -e .
+cd CLI-Authentication-Framework
+pip3 install -e ccc-cli/
 ccc configure
 ccc login
 ```
