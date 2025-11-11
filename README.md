@@ -319,7 +319,7 @@ def my_custom_tool():
 ```
 
 For complete SDK documentation and examples, see:
-- [CCA 0.2 - SDK Integration Guide.md](docs/CCA%200.2%20-%20SDK%20Integration%20Guide.md)
+- [Integration Guide - 0.2.md](docs/Integration%20Guide%20-%200.2.md)
 
 ## Troubleshooting
 
