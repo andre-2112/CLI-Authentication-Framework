@@ -278,29 +278,217 @@ def handle_approval(event):
         print(f"[+] Welcome email sent successfully")
 
         return html_response(f'''
-            <html>
+            <!DOCTYPE html>
+            <html lang="en">
             <head>
-                <title>Registration Approved</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Registration Approved - CLI Authentication Framework</title>
                 <style>
-                    body {{
-                        font-family: Arial, sans-serif;
-                        max-width: 600px;
-                        margin: 50px auto;
-                        padding: 20px;
-                        text-align: center;
+                    * {{
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
                     }}
-                    h1 {{ color: #28a745; }}
-                    .info {{ background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0; }}
+                    body {{
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        min-height: 100vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                    }}
+                    .container {{
+                        background: white;
+                        border-radius: 16px;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+                        max-width: 550px;
+                        width: 100%;
+                        padding: 48px;
+                        text-align: center;
+                        animation: slideUp 0.5s ease-out;
+                    }}
+                    @keyframes slideUp {{
+                        from {{
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }}
+                        to {{
+                            opacity: 1;
+                            transform: translateY(0);
+                        }}
+                    }}
+                    .success-icon {{
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 24px;
+                        animation: scaleIn 0.5s ease-out 0.2s backwards;
+                    }}
+                    @keyframes scaleIn {{
+                        from {{
+                            opacity: 0;
+                            transform: scale(0);
+                        }}
+                        to {{
+                            opacity: 1;
+                            transform: scale(1);
+                        }}
+                    }}
+                    .success-icon svg {{
+                        width: 48px;
+                        height: 48px;
+                        stroke: white;
+                        stroke-width: 3;
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                    }}
+                    h1 {{
+                        color: #1a202c;
+                        font-size: 32px;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                        line-height: 1.2;
+                    }}
+                    .subtitle {{
+                        color: #718096;
+                        font-size: 16px;
+                        margin-bottom: 32px;
+                        line-height: 1.5;
+                    }}
+                    .user-info {{
+                        background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+                        border-radius: 12px;
+                        padding: 24px;
+                        margin-bottom: 32px;
+                        text-align: left;
+                    }}
+                    .info-row {{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 12px 0;
+                        border-bottom: 1px solid #e2e8f0;
+                    }}
+                    .info-row:last-child {{
+                        border-bottom: none;
+                    }}
+                    .info-label {{
+                        color: #718096;
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                    }}
+                    .info-value {{
+                        color: #1a202c;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }}
+                    .status-badge {{
+                        display: inline-block;
+                        background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+                        color: white;
+                        padding: 8px 16px;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin-bottom: 24px;
+                    }}
+                    .next-steps {{
+                        background: #fff5f5;
+                        border-left: 4px solid #667eea;
+                        border-radius: 8px;
+                        padding: 20px;
+                        text-align: left;
+                        margin-top: 24px;
+                    }}
+                    .next-steps h3 {{
+                        color: #1a202c;
+                        font-size: 18px;
+                        margin-bottom: 12px;
+                        font-weight: 600;
+                    }}
+                    .next-steps ul {{
+                        list-style: none;
+                        padding: 0;
+                    }}
+                    .next-steps li {{
+                        color: #4a5568;
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                        padding-left: 24px;
+                        position: relative;
+                        line-height: 1.6;
+                    }}
+                    .next-steps li:before {{
+                        content: "→";
+                        position: absolute;
+                        left: 0;
+                        color: #667eea;
+                        font-weight: bold;
+                    }}
+                    .footer {{
+                        margin-top: 32px;
+                        padding-top: 24px;
+                        border-top: 1px solid #e2e8f0;
+                        color: #a0aec0;
+                        font-size: 13px;
+                    }}
+                    @media (max-width: 600px) {{
+                        .container {{
+                            padding: 32px 24px;
+                        }}
+                        h1 {{
+                            font-size: 24px;
+                        }}
+                    }}
                 </style>
             </head>
             <body>
-                <h1>✅ Registration Approved</h1>
-                <div class="info">
-                    <p><strong>Email:</strong> {user_data["email"]}</p>
-                    <p><strong>Name:</strong> {get_display_name(user_data)}</p>
+                <div class="container">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+
+                    <h1>Registration Approved!</h1>
+                    <p class="subtitle">The user account has been successfully created and activated.</p>
+
+                    <div class="status-badge">✓ Account Active</div>
+
+                    <div class="user-info">
+                        <div class="info-row">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">{user_data["email"]}</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">{get_display_name(user_data)}</span>
+                        </div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3>What happens next?</h3>
+                        <ul>
+                            <li>A welcome email has been sent to the user with login instructions</li>
+                            <li>The user can now authenticate using the CLI Authentication Framework</li>
+                            <li>Account credentials are ready for immediate use</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer">
+                        CLI Authentication Framework v0.3.0<br>
+                        Powered by AWS Cognito
+                    </div>
                 </div>
-                <p>User has been created successfully in Cognito.</p>
-                <p>They will receive a welcome email with login instructions.</p>
             </body>
             </html>
         ''', 200)
