@@ -60,3 +60,6 @@ Thumbs.db
 
 # Lambda backup files (keep only lambda_function.py and requirements.txt)
 lambda/lambda_function.*.py
+
+# Sensitive documentation (contains actual AWS configuration details)
+docs/dev/CCA 0.3 - ADMIN_EMAIL Environment Variable.md
