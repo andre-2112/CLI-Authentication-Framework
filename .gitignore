@@ -57,3 +57,6 @@ Thumbs.db
 # Environment files with secrets
 .env
 *.env
+
+# Lambda backup files (keep only lambda_function.py and requirements.txt)
+lambda/lambda_function.*.py
